@@ -1,0 +1,14 @@
+name: Application Check
+
+on:
+    pull_request:
+      branches-ignore:
+        - 'local'
+
+jobs:
+  application-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello
+        run: echo "Hello World!!!"
