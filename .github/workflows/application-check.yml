@@ -12,3 +12,9 @@ jobs:
     steps:
       - name: Hello
         run: echo "Hello World!!!"
+      - name: PR番号
+        run: echo "${GITHUB_REF#refs/heads/}"
+      - name: ブランチ名
+        run: echo "${GITHUB_HEAD_REF}"
+      - name: ブランチ名
+        run: echo "${{ github.ref }}"
