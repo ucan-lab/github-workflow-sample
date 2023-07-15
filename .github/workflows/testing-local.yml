@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: 存在チェック
-        run: ls -al /home/runner/work/github-workflow-sample/github-workflow-sample/.github/workflows/application-check.yml
+        run: ls -al ./.github/workflows/application-check.yml
       - uses: ./.github/workflows/application-check.yml
