@@ -6,7 +6,5 @@ on:
 runs:
   using: 'composite'
   steps:
-    - name: Application Check
-      run: echo "Hello Application Check!!!"
-    - name: ブランチ名
-      run: echo "${GITHUB_HEAD_REF}"
+    - run: echo "Hello Application Check!!!"
+    - run: echo "${GITHUB_HEAD_REF}"
