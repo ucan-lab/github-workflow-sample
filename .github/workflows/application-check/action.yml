@@ -4,7 +4,9 @@ on:
   workflow_call:
 
 runs:
-  - name: Application Check
-    run: echo "Hello Application Check!!!"
-  - name: ブランチ名
-    run: echo "${GITHUB_HEAD_REF}"
+  using: 'composite'
+  steps:
+    - name: Application Check
+      run: echo "Hello Application Check!!!"
+    - name: ブランチ名
+      run: echo "${GITHUB_HEAD_REF}"
