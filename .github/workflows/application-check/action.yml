@@ -1,10 +1,8 @@
 name: Application Check
 
-on:
-  workflow_call:
-
 runs:
   using: 'composite'
   steps:
-    - run: echo "Hello Application Check!!!"
-    - run: echo "${GITHUB_HEAD_REF}"
+    - run: echo "Step 1"
+    - run: echo "Step 2"
+    - run: echo "Step 3"
