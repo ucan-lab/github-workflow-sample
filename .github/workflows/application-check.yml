@@ -3,7 +3,7 @@ name: Application Check
 on:
   pull_request:
     branches-ignore:
-      - 'local'
+      - 'staging'
 
 jobs:
   application-check:
