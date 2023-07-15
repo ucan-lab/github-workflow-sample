@@ -1,14 +1,14 @@
 name: Application Check
 
 on:
-  pull_request:
-    branches-ignore:
-      - 'staging'
+  workflow_call:
 
 jobs:
   application-check:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello
-        run: echo "Hello World!!!"
+      - name: Application Check
+        run: echo "Hello Application Check!!!"
+      - name: ブランチ名
+        run: echo "${GITHUB_HEAD_REF}"
