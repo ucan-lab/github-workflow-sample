@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Hello
         run: echo "Hello World!!!"
-      - uses: ./.github/workflows/application-check.yml
+      - uses: ./.github/workflows/application-check
