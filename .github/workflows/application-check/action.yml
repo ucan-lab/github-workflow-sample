@@ -3,13 +3,8 @@ name: Application Check
 on:
   workflow_call:
 
-jobs:
-  application-check:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Application Check
-        run: echo "Hello Application Check!!!"
-      - name: ブランチ名
-        run: echo "${GITHUB_HEAD_REF}"
+runs:
+  - name: Application Check
+    run: echo "Hello Application Check!!!"
+  - name: ブランチ名
+    run: echo "${GITHUB_HEAD_REF}"
