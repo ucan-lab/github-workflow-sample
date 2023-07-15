@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Hello
-        run: ls -al /home/runner/work/github-workflow-sample/github-workflow-sample
+        run: ls -al /home/runner/work/github-workflow-sample/github-workflow-sample/.github/workflows
       - uses: ./.github/workflows/application-check.yml
