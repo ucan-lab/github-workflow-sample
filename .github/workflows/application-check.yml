@@ -11,6 +11,8 @@ jobs:
         run: |
           echo ${{ github.head_ref }}
           echo ${{ github.base_ref }}
+      - name: local->staging のみskip
+        run: exit 0
+        if: ${{ github.head_ref == 'local' && github.base_ref == 'staging' }}
       - name: Hello
         run: echo "World"
-        if: ${{ github.head_ref == 'local' && github.base_ref == 'staging' }}
