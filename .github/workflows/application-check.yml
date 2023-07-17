@@ -2,13 +2,15 @@ name: Application Check
 
 on:
   pull_request:
-    branches-ignore:
-      - 'staging'
 
 jobs:
-  application-check:
+  Build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Hello
-        run: echo "Hello World!!!"
+      - name: ブランチ名表示
+        run: |
+          echo ${{ github.head_ref }}
+          echo ${{ github.base_ref }}
+      - name: develop->staging 以外実行
+        run: echo "Hello World"
+        if: ${{ github.head_ref != 'develop' || github.base_ref != 'staging' }}
