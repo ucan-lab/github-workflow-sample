@@ -11,6 +11,6 @@ jobs:
         run: |
           echo ${{ github.head_ref }}
           echo ${{ github.base_ref }}
-      - name: local->staging 以外実行
+      - name: develop->staging 以外実行
         run: echo "Hello World"
         if: ${{ github.head_ref != 'develop' || github.base_ref != 'staging' }}
