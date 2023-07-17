@@ -9,3 +9,4 @@ jobs:
     steps:
       - run: echo called!
       - run: echo "${GITHUB_HEAD_REF}"
+      - run: echo "${ github.base_ref }"
