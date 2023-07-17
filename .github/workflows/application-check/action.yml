@@ -1,11 +1,10 @@
 name: Application Check
 
-runs:
-  steps:
-    - shell: bash
-      run: echo "Step 1"
-    - shell: bash
-      run: echo "Step 2"
-    - shell: bash
-      run: echo "Step 3"
+on:
+  workflow_call:
 
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo called!
