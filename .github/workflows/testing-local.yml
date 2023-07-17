@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: 存在チェック
         run: ls -al ./.github/workflows/application-check/action.yml
-      - uses: ./.github/workflows/application-check/action.yml
+      - uses: ./.github/workflows/application-check
