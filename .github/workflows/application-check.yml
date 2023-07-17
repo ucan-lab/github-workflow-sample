@@ -7,8 +7,8 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
-        run:
+      - name: ブランチ名
+        run: |
           echo ${{ github.head_ref }}
           echo ${{ github.base_ref }}
       - name: Hello
