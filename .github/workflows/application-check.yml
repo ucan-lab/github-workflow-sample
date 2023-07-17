@@ -13,4 +13,4 @@ jobs:
           echo ${{ github.base_ref }}
       - name: local->staging のみskip
         run: echo "World"
-        if: ${{ github.head_ref == 'local' && github.base_ref == 'staging' }}
+        if: ${{ ! (github.head_ref == 'local' && github.base_ref == 'staging') }}
