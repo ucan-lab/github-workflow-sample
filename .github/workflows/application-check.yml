@@ -7,6 +7,6 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo called!
-      - run: echo "${{ github.head_ref }}"
-      - run: echo "${{ github.base_ref }}"
+      - name: Hello
+        run: echo "World"
+        if: ${{ github.head_ref == 'local' && github.base_ref == 'staging' }}
