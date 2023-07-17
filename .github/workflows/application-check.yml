@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo called!
-      - run: echo "${GITHUB_HEAD_REF}"
-      - run: echo "${ github.base_ref }"
+      - run: echo "${{ github.head_ref }}"
+      - run: echo "${{ github.base_ref }}"
