@@ -7,7 +7,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
 
-    if: ${{ github.head_ref != 'develop' || github.base_ref != 'staging' }}
+    if: ${{ github.head_ref != 'develop' || github.base_ref != 'staging' || github.event_name == 'workflow_dispatch' }}
 
     steps:
       - name: ブランチ名表示
